@@ -1,12 +1,12 @@
 {
-  "name": "rollup-note",
+  "name": "esm-app",
   "version": "1.0.0",
-  "description": "rollup learning note",
-  "main": "src/index.js",
+  "description": "es module standard application",
+  "main": "/src/main.js",
   "scripts": {
     "build": "rollup -c",
     "watch": "rollup -c -w",
-    "serve": "serve public",
+    "serve": "node server/index.js",
     "start": "npm-run-all --parallel serve watch"
   },
   "repository": {
@@ -17,23 +17,18 @@
     "rollup"
   ],
   "author": "zhaohuanyu",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/zhaohuanyuu/rollup-note/issues"
-  },
-  "homepage": "https://github.com/zhaohuanyuu/rollup-note#readme",
   "devDependencies": {
     "@babel/core": "^7.14.3",
     "@babel/preset-env": "^7.14.2",
     "@rollup/plugin-babel": "^5.3.0",
-    "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.0.0",
     "npm-run-all": "^4.1.5",
     "rollup": "^2.45.2",
-    "rollup-plugin-terser": "^7.0.2",
-    "serve": "^11.3.2"
+    "rollup-plugin-terser": "^7.0.2"
   },
   "dependencies": {
+    "koa": "^2.13.1",
+    "koa-static": "^5.0.0",
     "systemjs": "^6.9.0"
   }
 }
